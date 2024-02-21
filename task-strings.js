@@ -7,8 +7,11 @@
 // "javascript-is-the-best"
 
 // Your code:
+/** 
+ * @param input {string} 
+*/
 const parametrize = (input) => {
-
+    return input[0].toUpperCase() + input.slice(1)
 };
 
 // 2 =================================
@@ -18,8 +21,11 @@ const parametrize = (input) => {
 // ➞ Hello Obi-wan from Starwars universe! It is nice to meet you! You look awesome for your 40, young Jedi!
 
 // Your code:
+/** 
+ * @param obj {{name: string, position: string, age: number, location: string}} 
+*/
 const giveSentenceForPerson = (obj) => {
-
+    return `Hello ${obj.name} from ${obj.location}! It is nice to meet you! You look awesome for your ${obj.age}, young ${obj.position}!`;
 };
 
 // 3 =================================
@@ -28,6 +34,9 @@ const giveSentenceForPerson = (obj) => {
 // replace("Hello Javascript") ➞ "H*ll* J*v*scr*pt"
 
 // Your code:
+/** 
+ * @param input {string} 
+*/
 const replace = (input) => {
-
+    return input.replace(/[aeio]/gm, "*");
 };

@@ -8,8 +8,9 @@
 
 // Your code:
 const drawTriangle = (length = 5) => {
-  
     // ... write code ...
+    for(let i = 1; i <= length;i++)
+      console.log("* ".repeat(i));
 };
 
 // 2#  ========== BONUS =======================
@@ -29,6 +30,9 @@ const drawTriangle = (length = 5) => {
 // Your code:
 const drawJavascriptWord = (word = "javascript") => {
   // ... write code ...
+  const len = word.length;
+  for(let i = 0; i <= len; i++)
+    console.log("*".repeat(len-i) + word.slice(len-i))
 };
 
 
@@ -47,6 +51,14 @@ const drawJavascriptWord = (word = "javascript") => {
 //   ];
 
 // Your code:
+/** 
+ * @param vehicles {{name: string, measuredSpeeds: number[]}[]} 
+*/
 const getVehiclesAndTopSpeed = (vehicles) => {
-  
+  return vehicles.map(x => {
+    return {
+      name: x.name, 
+      topSpeed: Math.max(...x.measuredSpeeds)
+    }
+  });
 };

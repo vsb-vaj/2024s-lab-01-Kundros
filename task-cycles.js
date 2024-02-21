@@ -6,8 +6,18 @@
 // arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
 
 // Your code:
+/** 
+ * @param num {number} 
+ * @param length {number} 
+ */
 const arrayOfMultiples = (num, length) => {
     // ... write code ...
+    const arr = [];
+
+    for(let i = 1; i <= length ;i++)
+        arr.push(num * i);
+
+    return arr;
 };
 
 // 2 =================================
@@ -19,8 +29,12 @@ const arrayOfMultiples = (num, length) => {
 // changeDirection([1, 2]) ➞ [2, 1]
 
 // Your code:
+/** 
+ * @param array {any[]} 
+ */
 const changeDirection = (array) => {
 // ... write code ...
+    return array.reverse();
 };
 
 // 3 =================================
@@ -30,6 +44,13 @@ const changeDirection = (array) => {
 // biggerArray([1,2,3], [2,3,4]) ➞ { array: [2,3,4], sum: 9 }
 
 // Your code:
+/** 
+ * @param array1 {number[]} 
+ * @param array2 {number[]} 
+ */
 const biggerArray = (array1, array2) => {
 // ... write code ...
+    if(array1.reduce((x, y) => x + y, 0) > array2.reduce((x, y) => x + y, 0))
+        return array1;
+    return array2;
 };
