@@ -72,14 +72,14 @@ const printSALDifference = (numbers) => {
 /** @param numbers {any[]} */
 const printAverage = (numbers) => {
   // Your code:
-  console.log(Math.av(...numbers) - Math.min(...numbers));
+  console.log((numbers.length > 0) ? (numbers.reduce((x, y) => {return x + y}, 0)/numbers.length) : (0));
 };
 
 // j) Function which will print to console the index of largest number (You can check Math functions)
 /** @param numbers {any[]} */
 const printLargestsIndex = (numbers) => {
   // Your code:
-    console.log((numbers.length > 0) ? (numbers.reduce((x, y) => {return x + y}, 0)/numbers.length) : (0));
+  console.log(numbers.indexOf(Math.max(...numbers)));
 };
 
 // k) Function which will print to console the even numbers (not the array of even numbers),
